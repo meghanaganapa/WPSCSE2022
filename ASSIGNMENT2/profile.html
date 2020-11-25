@@ -1,0 +1,107 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    body{
+        background-color: yellow;
+      
+    }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  height: 100px;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+#ha{
+  position: absolute;
+  left:600px;
+  bottom: 50%;
+}
+@media only screen and (max-width: 500px;) {
+  body {
+     width: 50%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+  <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);" style="width: 50px;" > 
+<div class="card ">
+  <img src="lady.jpg" alt="Meghana" style="width:100%">
+  <h1>Meghana</h1>
+  <p class="title">meghanaganapa@gmail.com</p>
+  <p>9951225276</p>
+  <p><button>Edit profile</button></p>
+</div>
+<div class="container-fluid" style="position:absolute; top:500px; background-color: red; color: white;">
+    <h2>
+        My orders
+    </h2>
+    <div class="row" style="padding-bottom: 50px;" >
+        <div class="col">
+          
+            <img src="book.jpg" id="demo" style="width:30%; height: 200px;" >
+            
+        </div>
+
+    <script>
+      document.getElementById("demo").addEventListener("mouseover", mouseOver);
+      document.getElementById("demo").addEventListener("mouseout", mouseOut);
+      
+      function mouseOver() {
+        document.getElementById("demo").src ="OIP.jpg" ;
+      }
+      
+      function mouseOut() {
+        document.getElementById("demo").src ="book.jpg";
+      }
+      </script>
+      <div class="col">
+
+    <p>A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover. The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page.</p>
+    <tab id="hu" >Quantity: 1 <br> Brought on : 23/09/2020</tab>   
+  </div>
+</div>
+</div>
+</body>
+</html>

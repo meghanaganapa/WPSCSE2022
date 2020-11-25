@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<style>
+  @media only screen and (max-width: 500px) {
+
+  body{
+width:50%;
+  }
+ 
+  }
+</style>
+</head>
+<body>
+    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);" style="width: 50px;" > 
+<div class="Heading" style="background-color:darkviolet; text-align: center;">
+    <h1 style="color: white;">
+        My buy list
+    </h1>
+</div>
+
+<div id="myDIV" class="header" style="background-color:darkviolet;">
+    <h2 style="margin:5px; color: white;">My List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  
+  <ul id="myUL">
+    <li class="checked">Hair straightner</li>
+    <li>Dress for party</li>
+    <li>Buy eggs</li>
+    <li>Read a book</li>
+    <li>Organize office</li>
+  </ul>
+  <div class="row">
+  <div class="col">  
+    <div class="card">
+    <img src="women.jpg" alt="Denim Jeans" style="width:100%">
+    <h1>Dress</h1>
+    <p class="price">Rs.1250</p>
+    <p>Super soft, Comfy and casual dress</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+    <img src="eggs.jpg" alt="eggs" style="width:100%">
+    <h1>Eggs-9</h1>
+    <p class="price">Rs.45</p>
+    <p>Fresh and healthy to eat</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+    <img src="men.jpg" alt="Suit" style="width:100%;">
+    <h1>Suit</h1>
+    <p class="price">Rs.3000</p>
+    <p>Trendy and comfy suits </p>
+    <p><button>Add to Cart</button></p>
+  </div>
+</div>
+<div class="col">
+    <div class="card">
+      <img src="book.jpg" alt="Denim Jeans" style="width:100%">
+      <h1>Famous five</h1>
+      <p class="price">Rs.500</p>
+      <p>Insteresting book to explore</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+  </div>    
+</div>
+  <script>
+  // Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+  
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>

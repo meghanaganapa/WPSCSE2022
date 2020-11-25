@@ -1,0 +1,35 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.huh
+{
+    border-style: solid;
+    border: steelblue;
+    text-align: center;
+    font-size: 100px;
+    font-style: italic;
+    color: aqua;
+}
+.Table
+{
+   background-color: aqua;
+   background-position: center;
+   text-size-adjust: 50px;
+   
+
+}
+.Happy
+{
+    
+    font-size: 50px;
+    font-style: italic;
+    color: black;
+}
+body
+{
+    background-color: chartreuse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}

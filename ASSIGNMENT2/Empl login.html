@@ -1,0 +1,145 @@
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+             @media only screen and (max-width: 600px;) {
+                 body
+                 {
+                     width: 50%;
+                 }
+                
+             }
+ 
+            ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+li {
+        float: left;
+    }
+
+li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+li a:hover {
+        background-color: #111;
+    }
+  body
+  {
+      background-color: violet;
+  }
+  .container
+  {
+      background-color: whitesmoke;
+      position: relative;
+      text-align: center;
+      padding-top: 100px;
+    
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron" style="background-color:deeppink">
+            <div class="container-fluid text-center">
+              <h1 style="background-color:floralwhite;width: 100%;">My Shopping cart</h1>      
+              <p>Where Everything is available</p>
+            </div>
+          </div>
+        <ul>
+            <li><a href="Home.html" >Home</a></li>
+            <li><a href="login.html" >Login</a></li>
+            <li><a href="todo.html" >My List</a></li>
+            <li><a href="News.html" >News</a></li>
+            <li><a href="Video.html" >Movies</a></li>
+            <li><a href="profile.html" >Profile</a></li>
+            <li><a href="1602-18-733-086 WPS ASSIGNMENT-1.html">Employee Dashboard</a></li>
+        </ul>
+
+        <div class="container">
+           <h1>Employee Login</h1>
+            <div class="card border-0 shadow my-5">
+              <div class="card-body p-5">
+                <form style="float:inline;">
+                    <label for="fname">Email</label><br>
+                    <input type="email" placeholder="Enter Username" id="fnam" name="fname" required><br></br>
+                    <label for="lname">Password:</label><br>
+                    <input type="password" placeholder="Enter password" id="lnam" name="lname" ><br></br>
+                  </form>
+                <button class="button" onclick="fun()">Log in</button><hr>
+                <div style="height: 200px">
+                    <div class="dropdown">
+                        <span style="color: black;">Designations we have are:</span>
+                        <div class="dropdown-content">
+                        <p>Executive!</p>
+                        <p>Manager</p>
+                        <p>Executive</p>
+                        <p>Technician</p>
+                        <p>Accountant</p>
+                        </div>
+                      </div>
+                </div>
+                <p class="lead mb-0">We have skilled employees!</p>
+                <img src="team.jpg" style="width: 70%;">
+              </div>
+              <script>
+                  var re = /[1-4]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}/;
+                  var ps= /[a-zA-z0-9@!#$%^&*_-.,]{8}/;
+                  var OK = re.exec(document.getElementById("fnam").value);
+                  var f=ps.exec(document.getElementById("lnam").value);
+                  function fun()
+                  {
+                      if(!OK)
+                      {
+                          if(!f){
+                          alert("Error in userid and password");
+                          }
+                          else{
+                              alert("Eroor in userid");
+                          }
+                      }
+                      else{
+                          if(!f)
+                          {
+                              alert("Error in password");
+                          }
+                      }
+
+                
+                  }
+              </script>
+            </div> 
+        </div> 
+               
+    </body>
+    </html>
+         
+   

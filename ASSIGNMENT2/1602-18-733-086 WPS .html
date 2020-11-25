@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            @media only screen and (max-width: 600px;){
+             .form-horizontal:after
+             {
+                 padding-top: 20px ;
+                 width: 50%;
+                 height:500px;
+             }
+             #submit
+             {
+                 background-color: purple;
+                 color: white;
+             }
+            }
+            body
+            {
+                background-color:violet;
+            }
+            .form-group {
+                box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            height: 520px;
+            padding: 20px;
+            }
+            
+           .form-horizontal:before
+            {
+                position: absolute;
+                right: 200px;
+                left: 200px;
+                top: 250px;
+                align-items: center;
+             
+            }
+           #submit
+           {
+               background-color:violet;
+           }
+           .col-sm-5
+           {
+               padding: 20px;
+           }
+           
+         
+        
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 style="background-color:violet; color: mintcream;">Salary Calculator</h1>
+
+       <form class="form-horizontal" >
+        <div class="form-group">
+            <label class="control-label col-sm-5" for="userid" style="padding: 25px;">Userid</label>
+            <div class="col-sm-5">      
+            <input type="text"  class="form-control" id="userid" placeholder="Userid" required>
+        </div>
+        
+            <label class="control-label col-sm-5" for="Name" style="padding: 25px;">Username</label>
+            <div class="col-sm-5">
+            <input type="text"  class="form-control" id="Name" placeholder="Username" required>
+        </div> 
+            
+            
+            <label class="control-label col-sm-5" for="select1" style="padding: 25px;">Designations</label>
+            <div class="col-sm-5">
+                <select id="select1" class="form-control" required> 
+                <option value="HR">HR</option> 
+                <option value="MANAGER">MANAGER</option> 
+                <option value="ACCOUNTANT">ACCOUNTANT</option> 
+            </select>
+            </div>
+            <label class="control-label col-sm-5" for="nod"  style="padding: 25px;">No of days worked</label>
+            <div class="col-sm-5">
+                <input type="text" id="nod" class="form-control"  name="Noofdays">
+            </div>   
+            
+            
+            <label class="control-label col-sm-5" for="select1"></label>
+            <div class="col-sm-5">
+            <button id="submit"  class="form-control" name="submit1" onclick="testInfo();" >Calculate</button>
+            </div>
+            
+   
+            </div>
+            <br>
+            
+        </form>
+        </div>
+    </div>
+        <script>
+           var re = /[1-4]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}/;
+            function testInfo() {
+            var OK = re.exec(document.getElementById("userid").value);
+            var x = document.getElementById("Name").value;
+            if (!OK ) {
+                if(!x){
+                        alert ("ERROR in userid and name!");
+                     } 
+                     else{
+                        alert ("ERROR in userid!");
+                     }
+            }
+            else
+            {
+                if(!x)
+                {
+                    alert ("ERROR in username!");
+                }
+                else{
+                    var n=document.getElementById("nod").value;
+                    var selectElement =  document.querySelector('#select1').value; 
+                    console.log(n,selectElement);
+                    if(selectElement=="MANAGER")
+                    {
+                        var d= n*5000;
+                        window.alert("Salary "+d);                   
+                    }
+                    else if(selectElement=="HR")
+                    {
+                        var d= n*4000;
+                        window.alert("Salary "+d);
+                    }
+                    else if(selectElement=="ACCOUNTANT")
+                    {
+                        var d= n*3000;
+                        window.alert("Salary "+d);
+                    }
+
+                }
+            }
+
+            }
+        </script>
+    </body>
+</html>

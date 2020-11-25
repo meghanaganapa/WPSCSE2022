@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <style>
+           h1{
+    background-color:blue;
+    text-align: center;
+    text-shadow: cornsilk;
+    height:"200px";
+    }
+ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+li {
+        float: left;
+    }
+
+li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+li a:hover {
+        background-color: #111;
+    }
+    .imga
+    {
+        float:right;
+        
+    }
+    body
+    {
+        background-color: cyan ;
+
+    }
+
+            .sec,.orders ,.profile{
+                float: left;
+                     width: 50%;
+                 padding: 10px;
+                }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*
+{
+box-sizing: border-box;
+}
+.column
+{
+    float: left;
+width: 25%;
+padding: 5px;
+
+}
+.img
+{
+    width: 100%;
+}
+@media screen and (max-width:800px) {
+  .column, .sec,.orders ,.profile{
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }}
+        </style>
+    </head>
+    <body>
+        <img class="imga"src="flower.jpg" height="100px" width="200px">
+        <h1>  MY Shopping cart</h1><br>
+        <ul>
+            <li><a href="C:\Users\meghana ganapa\Desktop\codes and others\WPS\Home.html" >Home</a></li>
+            <li><a href="C:\Users\meghana ganapa\Desktop\codes and others\WPS\login.html" >Login</a></li>
+            <li><a href="C:\Users\meghana ganapa\Desktop\codes and others\WPS\Webpage.html" >Settings</a></li>
+            <li><a href="C:\Users\meghana ganapa\Desktop\codes and others\WPS\News.html" >News</a></li>
+            <li><a href="C:\Users\meghana ganapa\Desktop\codes and others\WPS\Video.html" >Movies</a></li>
+        </ul>
+        <div class="row">
+        <div class="profile" style="background-color: crimson; width: 30%;">
+            <img src="profile.jpg" width="50%" >
+            <p style="background-color:aliceblue;">My profile</p>
+            <button type="button" onclick="my()">MY PROFILE</button>
+
+            <script>
+            function my() {
+                document.write("Your profile");
+                }
+                </script>
+            
+        </div>
+        <div class="orders" style="background-color: crimson; width: 30%;">
+            <img src="shopping.jpg" width="80%" >
+            <p style="background-color: aliceblue;">Your orders</p> 
+            <button type="button" onclick="my1()">MY PROFILE</button>
+
+            <script>
+                function my1() {
+                    document.write("My Orders");
+                    }
+                    </script>           
+
+        </div>
+        <div class="sec" style="background-color: crimson; width: 30%;">
+            <img src="security.jpg" width="40%">
+            <p style="color:aliceblue">security</p>
+            <button type="button" onclick="my2()">Click me!</button>
+
+            <script>
+            function my2() {
+                    document.write("Security");
+                }
+            </script>
+        </div>
+        </div>
+        <h1>GRID OF IMAGES</h1>
+        <div>
+            <div class="column">
+                <img src="isl.jpg">
+            </div>
+            <div class="column">
+                <img src="sea.jpg">
+            </div>
+            <div class="column">
+                <img src="sea.jpg">
+            </div>
+            <div class="column">
+                <img src="isl.jpg">
+            </div>
+            
+        </div>
+        <div>
+            <div class="column">
+                <img src="isl.jpg">
+            </div>
+            <div class="column">
+                <img src="sea.jpg">
+            </div>
+            <div class="column">
+                <img src="sea.jpg">
+            </div>
+            <div class="column">
+                <img src="isl.jpg">
+            </div>
+            
+        </div>
+    </body>
+</html>
